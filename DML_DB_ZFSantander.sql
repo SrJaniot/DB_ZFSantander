@@ -1,3 +1,4 @@
+--DATA BASE SENHUB 2023 :)
 INSERT INTO tab_rol (Id_Rol, Nombre_Rol, Descripcion_Rol)
 VALUES
 (1,'ADMIN', 'ROL ADMIN'),
