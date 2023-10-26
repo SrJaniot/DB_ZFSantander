@@ -88,6 +88,7 @@ Nombre_Premio   VARCHAR NOT NULL, -- Un nombre que vaya de acuerdo con el premio
 Detalles_Premio VARCHAR NOT NULL, -- Detalles sobre el premio que se quiere brindar ejemplo(Dos Entradas a Cinemark para cualquier pelicula que inluyen combo 3 )
 Coste_Premio    INTEGER NOT NULL, -- Valor en puntos que tiene el premio para poder reclamarlo
 Estado_Premio   BOOLEAN NOT NULL DEFAULT TRUE, -- Estado en el que se encuentra el premio (TRUE = Premio activo  Y FALSE = Premio desactivado)
+Foto            VARCHAR NOT NULL,--Foto del premio
 user_insert VARCHAR ,
 user_update VARCHAR,
 date_insert TIMESTAMP WITHOUT TIME ZONE ,
@@ -100,6 +101,7 @@ CREATE TABLE Tab_Empresa -- Tabla donde se almacenaran las empresa que hacen par
 (
     NIT             VARCHAR  NOT NULL,--Id de indentificacion unico para cada empresa que hace parte de ZFSantander
     Nombre_Empresa  VARCHAR NOT NULL,--Nombre de la empresa que hace parte de ZFSantander
+    oficina         VARCHAR NOT NULL,--Direccion de la empresa 
     Estado_Empresa  BOOLEAN NOT NULL DEFAULT TRUE,--Estado de la empresa (TRUE = Empresa activa  y False=Empresa inactiva )
     Puntos          INTEGER  NOT NULL DEFAULT 0,--Cantidad de puntos que tiene aculados una empresa. 
     user_insert VARCHAR ,
