@@ -335,6 +335,30 @@ $$
 $$
 LANGUAGE PLPGSQL;
 
+CREATE OR REPLACE FUNCTION registrar_colaborador (Pdocumento Tab_Colaborador.Documento_Colaborador%TYPE,Pempresa Tab_Colaborador.Empresa_Colaborador%TYPE,Pnombre1 Tab_Colaborador.Nombre_1%TYPE,Pnombre2 Tab_Colaborador.Nombre_2%TYPE,Papellido1 Tab_Colaborador.Apellido_1%TYPE,Papellido2 Tab_Colaborador.Apellido_2%TYPE,Pgenero Tab_Colaborador.Genero%TYPE,PcorreoE Tab_Colaborador.Correo_Empresarial%TYPE,PcorreoP Tab_Colaborador.Correo_Personal%TYPE,PfechaN Tab_Colaborador.Fecha_Nacimiento%TYPE,Pfoto Tab_Colaborador.Foto%TYPE) RETURNS BOOLEAN AS
+$$
+DECLARE Rec_colaborador RECORD ;
+BEGIN
+    SELECT a.Documento_Colaborador,a.Empresa_Colaborador,a.Nombre_1,a.Nombre_2,a.Apellido_1,a.Apellido_2,a.Genero,a.Correo_Empresarial,a.Correo_Personal,a.Fecha_Nacimiento,a.Foto,a.Estado_Colaborador INTO Rec_colaborador FROM Tab_Colaborador a WHERE a.Documento_Colaborador=Pdocumento;
+    IF FOUND THEN
+        IF Rec_colaborador.Estado_Colaborador IS TRUE THEN
+            RAISE NOTICE 'Se encontro un colaborador  con documento: % ACTIVO  en otra empresa con NIT: % ',Rec_colaborador.Documento_Colaborador,Rec_colaborador.Empresa_Colaborador;
+            RETURN FALSE;
+        ELSE 
+            RAISE NOTICE 'Ya  existio el colaborador con documento:% registrado en otra empresa se usaran los datos basicos encontrados junto con los nuevos datos proporcionados ',Pdocumento;
+            INSERT INTO Tab_Colaborador VALUES(Pdocumento,Pempresa,Rec_colaborador.Nombre_1,Rec_colaborador.Nombre_2,Rec_colaborador.Apellido_1,Rec_colaborador.Apellido_2,Rec_colaborador.Genero,PcorreoE,PcorreoP,Rec_colaborador.Fecha_Nacimiento,Pfoto);
+            RETURN TRUE;
+		END IF;
+    ELSE
+        RAISE NOTICE 'Se inserta nuevo colaborador ';
+        INSERT INTO Tab_Colaborador VALUES(Pdocumento,Pempresa,Pnombre1,Pnombre2,Papellido1,Papellido2,Pgenero,PcorreoE,PcorreoP,PfechaN,Pfoto);
+        RETURN TRUE;
+	END IF;
+
+
+END;
+$$
+LANGUAGE PLPGSQL;
 
 
 
