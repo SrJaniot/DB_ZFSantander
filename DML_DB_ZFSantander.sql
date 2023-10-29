@@ -79,6 +79,7 @@ VALUES
 ('6000000002', '900123456-16', 'Ana', 'María', 'Lopez', 'Rodríguez', 'Femenino', 'ana.lopez@zfsantander.com', 'ana.lopez@gmail.com', '1998-08-08', 'https://cloudfront-us-east-1.images.arcpublishing.com/artear/K57L7QTJUK2WK6SZM5BN4V2ZTM.jpg', TRUE, 50);
 
 
+--SELECT registrar_colaborador('1000000002', '900123456-27', 'Luis', 'Pablo', 'Gonzalez', 'Martínez', 'Masculino', 'luis.gonzalez@zfsantander.com', 'luis.gonzalez@gmail.com', '1992-02-02', 'https://cloudfront-us-east-1.images.arcpublishing.com/artear/K57L7QTJUK2WK6SZM5BN4V2ZTM.jpg');
 
 INSERT INTO Tab_Evento (Id_Evento, Nombre_Evento, Descripcion_Evento, Foto_Evento, Fecha_Evento, Fecha_Evento_FIN, Aforo_Maximo, Aforo_Registrado, Puntos_Colaborador, Puntos_Empresa, Puntos_Castigo, Estado_Boolean)
 VALUES

@@ -346,8 +346,9 @@ BEGIN
             RETURN FALSE;
         ELSE 
             RAISE NOTICE 'Ya  existio el colaborador con documento:% registrado en otra empresa se usaran los datos basicos encontrados junto con los nuevos datos proporcionados ',Pdocumento;
-            INSERT INTO Tab_Colaborador VALUES(Pdocumento,Pempresa,Rec_colaborador.Nombre_1,Rec_colaborador.Nombre_2,Rec_colaborador.Apellido_1,Rec_colaborador.Apellido_2,Rec_colaborador.Genero,PcorreoE,PcorreoP,Rec_colaborador.Fecha_Nacimiento,Pfoto);
-            RETURN TRUE;
+             UPDATE Tab_Colaborador SET Empresa_Colaborador=Pempresa,Correo_Empresarial=PcorreoE,Correo_Personal=PcorreoP,Foto=Pfoto
+             WHERE Documento_Colaborador=Pdocumento;
+             RETURN TRUE;
 		END IF;
     ELSE
         RAISE NOTICE 'Se inserta nuevo colaborador ';
