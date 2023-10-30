@@ -102,6 +102,7 @@ CREATE TABLE Tab_Empresa -- Tabla donde se almacenaran las empresa que hacen par
     NIT             VARCHAR  NOT NULL,--Id de indentificacion unico para cada empresa que hace parte de ZFSantander
     Nombre_Empresa  VARCHAR NOT NULL,--Nombre de la empresa que hace parte de ZFSantander
     oficina         VARCHAR NOT NULL,--Direccion de la empresa 
+    logo            VARCHAR NOT NULL,
     Estado_Empresa  BOOLEAN NOT NULL DEFAULT TRUE,--Estado de la empresa (TRUE = Empresa activa  y False=Empresa inactiva )
     Puntos          INTEGER  NOT NULL DEFAULT 0,--Cantidad de puntos que tiene aculados una empresa. 
     user_insert VARCHAR ,
