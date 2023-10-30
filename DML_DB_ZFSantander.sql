@@ -83,8 +83,7 @@ VALUES
 
 INSERT INTO Tab_Evento (Id_Evento, Nombre_Evento, Descripcion_Evento, Foto_Evento, Fecha_Evento, Fecha_Evento_FIN, Aforo_Maximo, Aforo_Registrado, Puntos_Colaborador, Puntos_Empresa, Puntos_Castigo, Estado_Boolean)
 VALUES
-(2, '$ git pull
-', 'Evento para celebrar el día de la familia con los colaboradores de ZFSantander', 'https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-dia-internacional-familias_23-2148897813.jpg', '2023-10-15 10:00:00', '2023-10-15 18:00:00', 150, 0, 15, 15, 10, TRUE);
+(2, 'dia de la familia 2023', 'Evento para celebrar el día de la familia con los colaboradores de ZFSantander', 'https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-dia-internacional-familias_23-2148897813.jpg', '2023-10-15 10:00:00', '2023-10-15 18:00:00', 150, 0, 15, 15, 10, TRUE);
 
 INSERT INTO Tab_Evento (Id_Evento, Nombre_Evento, Descripcion_Evento, Foto_Evento, Fecha_Evento, Fecha_Evento_FIN, Aforo_Maximo, Aforo_Registrado, Puntos_Colaborador, Puntos_Empresa, Puntos_Castigo, Estado_Boolean)
 VALUES
