@@ -151,19 +151,3 @@ VALUES (9,'Tablet de última generación', 'Tablet con pantalla de alta resoluci
 INSERT INTO Tab_Premio (Id_Premio,Nombre_Premio, Detalles_Premio, Coste_Premio, Estado_Premio,Foto)
 VALUES (10,'Membresía de gimnasio', 'Membresía de un año en un gimnasio de primera clase', 150, TRUE,'https://web-back.perfectgym.com/sites/default/files/styles/460x/public/equipment%20%286%29.jpg?itok=bC0T32-K');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
