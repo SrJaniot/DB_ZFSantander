@@ -48,25 +48,21 @@ VALUES
 (18,'Empresario', 'Persona que tiene capacidad de crear y gestionar un negocio'),
 (19,'Ingenioso', 'Persona que encuentra soluciones creativas a los problemas');
 
-INSERT INTO Tab_Empresa (NIT, Nombre_Empresa,oficina, Estado_Empresa, Puntos)
+INSERT INTO Tab_Empresa (NIT, Nombre_Empresa,oficina,logo, Estado_Empresa, Puntos)
 VALUES
-('900123456-11', 'Frimac S.A','calle 1 #1-1', TRUE, 500),
-('900123456-12', 'CAMPUS LAND SAS BIC','calle 1 #1-1', TRUE, 200),
-('900123456-13', 'BASC ORIENTE ','calle 1 #1-1', TRUE, 100),
-('900123456-14', 'MANTILLA MARKETING S.A.S.','calle 1 #1-1', TRUE, 500),
-('900123456-15', 'MAJOREL BUCARAMANGA SAS ','calle 1 #1-1', TRUE, 200),
-('900123456-16', 'Empresa 9','calle 1 #1-1', TRUE, 100),
-('900123456-17', 'Empresa 10','calle 1 #1-1', TRUE, 500),
-('900123456-18', 'Empresa 11','calle 1 #1-1', TRUE, 200),
-('900123456-19', 'Empresa 12','calle 1 #1-1', TRUE, 100),
-('900123456-20', 'Empresa 13','calle 1 #1-1', TRUE, 500),
-('900123456-21', 'Empresa 14','calle 1 #1-1', TRUE, 200),
-('900123456-22', 'Empresa 15','calle 1 #1-1', TRUE, 100),
-('900123456-23', 'Empresa 16','calle 1 #1-1', TRUE, 500),
-('900123456-24', 'Empresa 17','calle 1 #1-1', TRUE, 200),
-('900123456-25', 'Empresa 18','calle 1 #1-1', TRUE, 100),
-('900123456-26', 'Empresa 19','calle 1 #1-1', TRUE, 500),
-('900123456-27', 'Empresa 20','calle 1 #1-1', TRUE, 200);
+('900123456-11', 'Frimac S.A','calle 1 #1-1','https://www.grupofrimac.com.co/images/main/logo-header.png', TRUE, 500),
+('900123456-12', 'CAMPUS LAND SAS BIC','calle 1 #1-1','https://www.zonafrancasantander.com/media/22905fd6ad771b3005da80d5a2758d07879658a7.png', TRUE, 200),
+('900123456-13', 'BASC ORIENTE ','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 100),
+('900123456-14', 'MANTILLA MARKETING S.A.S.','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 500),
+('900123456-15', 'MAJOREL BUCARAMANGA SAS ','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 200),
+('900123456-16', 'Empresa 9','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 100),
+('900123456-17', 'Empresa 9','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 100),
+('900123456-18', 'Empresa 9','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 100),
+('900123456-19', 'Empresa 9','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 100),
+('900123456-20', 'Empresa 9','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 100),
+('900123456-21', 'Empresa 9','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 100),
+('900123456-22', 'Empresa 9','calle 1 #1-1','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkGddEzW31uxQj5noZzI5nq_8p_99i7AK1AclpmZg_8Q&s', TRUE, 100);
+
 
 
 INSERT INTO Tab_Colaborador (Documento_Colaborador, Empresa_Colaborador, Nombre_1, Nombre_2, Apellido_1, Apellido_2, Genero, Correo_Empresarial, Correo_Personal, Fecha_Nacimiento, Foto, Estado_Colaborador, Puntos_Acumulados)
