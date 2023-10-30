@@ -791,6 +791,34 @@ LANGUAGE PLPGSQL;
 
 
 
+--FUNCION PARA TRIGGER AUTO INCREMENTABLE ID   tab_premio
+
+CREATE OR REPLACE FUNCTION AUTO_INCREMENTABLE_ID_TAB_PREMIO() RETURNS "trigger" AS
+$$
+
+        
+   
+    DECLARE INCREMENTABLE INTEGER;
+    
+    BEGIN
+        IF TG_OP ='INSERT' THEN
+
+             SELECT funcion_Retorna_ultmoid('Tab_Premio','Id_Premio') INTO INCREMENTABLE;
+             NEW.Id_Premio=INCREMENTABLE;
+
+
+
+           
+        END IF;
+        RETURN NEW;
+    END;
+$$
+LANGUAGE PLPGSQL;
+
+
+
+
+
 
 
 
@@ -859,6 +887,16 @@ FOR EACH ROW EXECUTE PROCEDURE fun_act_tabla();
 
 CREATE TRIGGER tri_actividad_tabla_PREMIO BEFORE INSERT OR UPDATE ON Tab_Premio
 FOR EACH ROW EXECUTE PROCEDURE fun_act_tabla();
+
+CREATE TRIGGER tri_AUTO_INCREMENTABLE_ID_TAB_PREMIO BEFORE INSERT  ON Tab_Premio
+FOR EACH ROW EXECUTE PROCEDURE AUTO_INCREMENTABLE_ID_TAB_PREMIO();
+
+
+
+
+
+
+
 
 -- TRIGGER PARA Tab_Empresa --------------------------------------------------------------------------
 CREATE OR REPLACE TRIGGER tri_delete_tabla_EMPRESA AFTER DELETE ON Tab_Empresa
